@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: "AIzaSyDb2LUsGOny0Za4D3elnsIofTaEPXkMgtA",
+    authDomain: "trainwise-e0020.firebaseapp.com",
+    projectId: "trainwise-e0020",
+    storageBucket: "trainwise-e0020.firebasestorage.app",
+    messagingSenderId: "708975823612",
+    appId: "1:708975823612:web:1b445a2f645f2428ac6579"
+  }
 };
 
 /*
