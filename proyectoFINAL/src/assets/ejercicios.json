@@ -64,9 +64,66 @@
           "id":3,
           "nombre":"Piernas",
           "ejercicios":[
-             {
-                
-             }
+            {
+                "id": 301,
+                "nombre": "Sentadillas",
+                "Descripcion": "Te colocas de pie con los pies al ancho de los hombros. Flexionas las rodillas y bajas el cuerpo como si fueras a sentarte, manteniendo la espalda recta. Luego regresas a la posición inicial.",
+                "Url": ""
+              },
+              {
+                "id": 302,
+                "nombre": "Prensa de piernas",
+                "Descripcion": "Te sientas en la máquina de prensa con los pies apoyados en la plataforma. Empujas la plataforma con las piernas hasta estirarlas casi por completo, y luego bajas controladamente.",
+                "Url": ""
+              },
+              {
+                "id": 303,
+                "nombre": "Desplantes",
+                "Descripcion": "Das un paso hacia adelante con una pierna y flexionas ambas rodillas hasta que la rodilla trasera casi toque el suelo. Luego regresas a la posición inicial y repites con la otra pierna.",
+                "Url": ""
+              },
+              {
+                "id": 304,
+                "nombre": "Peso muerto rumano",
+                "Descripcion": "De pie con una barra o mancuernas, inclinas el torso hacia adelante manteniendo la espalda recta y las piernas ligeramente flexionadas. Luego vuelves a la posición erguida.",
+                "Url": ""
+              },
+              {
+                "id": 305,
+                "nombre": "Extensión de cuadriceps",
+                "Descripcion": "Te sientas en la máquina con las piernas debajo de la almohadilla. Estiras las piernas hacia arriba hasta que estén rectas y luego las bajas controladamente.",
+                "Url": ""
+              },
+              {
+                "id": 306,
+                "nombre": "Curl femoral",
+                "Descripcion": "Te acuestas boca abajo en la máquina de curl de piernas. Flexionas las rodillas para llevar los tobillos hacia los glúteos y luego bajas controladamente.",
+                "Url": ""
+              },
+              {
+                "id": 307,
+                "nombre": "Elevación de talones (gemelos)",
+                "Descripcion": "De pie sobre una superficie elevada, subes y bajas los talones para trabajar los músculos de la pantorrilla.",
+                "Url": ""
+              },
+              {
+                "id": 308,
+                "nombre": "Sentadilla búlgara",
+                "Descripcion": "Colocas un pie en un banco detrás de ti y bajas el cuerpo flexionando la rodilla delantera. Luego regresas a la posición inicial.",
+                "Url": ""
+              },
+              {
+                "id": 309,
+                "nombre": "Aductor de piernas",
+                "Descripcion": "Te sientas en la máquina con las piernas abiertas. Juntas las piernas contra la resistencia y luego las separas controladamente.",
+                "Url": ""
+              },
+              {
+                "id": 310,
+                "nombre": "Abductor de piernas",
+                "Descripcion": "Te sientas en la máquina con las piernas juntas. Separas las piernas contra la resistencia y luego las juntas controladamente.",
+                "Url": ""
+              }
           ]
        }
     ]
