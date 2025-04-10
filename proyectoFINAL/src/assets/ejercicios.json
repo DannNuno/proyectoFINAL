@@ -1,0 +1,73 @@
+{
+    "grupos_musculares":[
+       {
+          "id":1,
+          "nombre":"Pecho",
+          "ejercicios":[
+             {
+                "id":101,
+                "nombre":"Press de banca",
+                "Descripcion":"Te recuestas en un banco plano con una barra o mancuernas. Empujas el peso hacia arriba desde la altura del pecho y luego bajas lentamente hasta casi tocar el pecho.",
+                "Url":""
+             },
+             {
+                "id":102,
+                "nombre":"Chest flyes",
+                "Descripcion":"Te recuestas en un banco plano o inclinado, sosteniendo una mancuerna en cada mano. Con los codos ligeramente flexionados, abres los brazos hacia los lados hasta sentir un estiramiento en el pecho. Regresas controladamente a la posición inicial.",
+                "Url":""
+             },
+             {
+                "id":103,
+                "nombre":"Press inclinado",
+                "Descripcion":"Te recuestas en un banco inclinado y tomas una barra o mancuernas. Empujas el peso hacia arriba desde la altura del pecho y luego bajas controladamente.",
+                "Url":""
+             },
+             {
+                "id":104,
+                "nombre":"Press de banca con mancuerna",
+                "Descripcion":"Te recuestas en un banco plano con una mancuerna en cada mano. Empujas el peso hacia arriba desde la altura del pecho y luego bajas lentamente hasta casi tocar el pecho.",
+                "Url":""
+             }
+          ]
+       },
+       {
+          "id":2,
+          "nombre":"Espalda",
+          "ejercicios":[
+             {
+                "id":201,
+                "nombre":"Dominadas",
+                "Descripcion":"Cuelgas de una barra con las palmas hacia adelante. Jalando con los brazos, llevas tu barbilla por encima de la barra y luego bajas controladamente.",
+                "Url":""
+             },
+             {
+                "id":202,
+                "nombre":"Remo con barra",
+                "Descripcion":"Te inclinas hacia adelante con una barra en las manos. Tiras de la barra hacia tu abdomen, manteniendo la espalda recta y los codos cerca del cuerpo.",
+                "Url":""
+             },
+             {
+                "id":203,
+                "nombre":"Remo en máquina",
+                "Descripcion":"Te sientas en una máquina de remo y tiras de las manijas hacia tu abdomen, manteniendo la espalda recta y los codos cerca del cuerpo.",
+                "Url":""
+             },
+             {
+                "id":204,
+                "nombre":"Remo con mancuerna",
+                "Descripcion":"Te inclinas hacia adelante con una mancuerna en cada mano. Tiras de las mancuernas hacia tu abdomen, manteniendo la espalda recta y los codos cerca del cuerpo.",
+                "Url":""
+             }
+          ]
+       },
+       {
+          "id":3,
+          "nombre":"Piernas",
+          "ejercicios":[
+             {
+                
+             }
+          ]
+       }
+    ]
+ }
