@@ -125,6 +125,80 @@
                 "Url": ""
               }
           ]
+       },
+       {
+         "id": 4,
+         "nombre": "Hombros",
+         "ejercicios": [
+           {
+             "id": 401,
+             "nombre": "Press militar",
+             "Descripcion": "De pie o sentado, empujas una barra o mancuernas hacia arriba desde los hombros hasta estirar completamente los brazos.",
+             "Url": ""
+           },
+           {
+             "id": 402,
+             "nombre": "Elevaciones laterales",
+             "Descripcion": "De pie con una mancuerna en cada mano, levantas los brazos lateralmente hasta la altura de los hombros y luego bajas controladamente.",
+             "Url": ""
+           },
+           {
+             "id": 403,
+             "nombre": "Jalon con cuerda para hombro posterior",
+             "Descripcion": "Te pones en la polea alta y jalas la cuerd a hacia tu cara, manteniendo los codos altos y la espalda recta.",
+             "Url": ""
+           }
+         ]
+       },
+       {
+         "id": 5,
+         "nombre": "Bíceps y antebrazo",
+         "ejercicios": [
+           {
+             "id": 501,
+             "nombre": "Curl con barra",
+             "Descripcion": "De pie, tomas una barra con las palmas hacia arriba y la llevas hacia el pecho flexionando los codos.",
+             "Url": ""
+           },
+           {
+             "id": 502,
+             "nombre": "Curl martillo",
+             "Descripcion": "Igual que el curl con mancuernas pero con las palmas enfrentadas durante todo el movimiento.",
+             "Url": ""
+           },
+           {
+             "id": 503,
+             "nombre": "Curl predicador",
+             "Descripcion": "Sentado en un banco predicador, apoyas los brazos en la almohadilla y haces curl con una barra o mancuerna.",
+             "Url": ""
+           },
+           {
+               "id": 504,
+               "nombre": "Curl con agarre prono",
+               "Descripcion": "De pie, tomas una barra con las palmas hacia abajo y la llevas hacia el pecho flexionando los codos.",
+               "Url": ""
+           }
+         ]
+       },
+       {
+         "id": 6,
+         "nombre": "Tríceps",
+         "ejercicios": [
+           {
+             "id": 601,
+             "nombre": "Extension de tricpes ",
+             "Descripcion": "Pones la polea en la parte alta, agarras la cuerda y jalas hacia abajo, estirando el brazo completamente.",
+             "Url": ""
+           },
+           {
+             "id": 602,
+             "nombre": "Rompecraneos en polea", 
+             "Descripcion": "Agarras la polea y la pones a la altura de cintura y jalas por arriba de la cabeza.",
+             "Url": ""
+           }
+         ]
        }
     ]
  }
+
+ 
