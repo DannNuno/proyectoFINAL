@@ -9,5 +9,9 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
+  },  {
+    path: 'gym-cerca',
+    loadComponent: () => import('./gym-cerca/gym-cerca.page').then( m => m.GymCercaPage)
   },
+
 ];
