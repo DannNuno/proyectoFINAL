@@ -13,5 +13,9 @@ export const routes: Routes = [
     path: 'gym-cerca',
     loadComponent: () => import('./gym-cerca/gym-cerca.page').then( m => m.GymCercaPage)
   },
+  {
+    path: 'ejercicios',
+    loadComponent: () => import('./ejercicios/ejercicios.page').then( m => m.EjerciciosPage)
+  },
 
 ];
