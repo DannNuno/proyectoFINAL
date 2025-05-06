@@ -1,204 +1,202 @@
 {
-    "grupos_musculares":[
-       {
-          "id":1,
-          "nombre":"Pecho",
-          "ejercicios":[
-             {
-                "id":101,
-                "nombre":"Press de banca",
-                "Descripcion":"Te recuestas en un banco plano con una barra o mancuernas. Empujas el peso hacia arriba desde la altura del pecho y luego bajas lentamente hasta casi tocar el pecho.",
-                "Url":""
-             },
-             {
-                "id":102,
-                "nombre":"Chest flyes",
-                "Descripcion":"Te recuestas en un banco plano o inclinado, sosteniendo una mancuerna en cada mano. Con los codos ligeramente flexionados, abres los brazos hacia los lados hasta sentir un estiramiento en el pecho. Regresas controladamente a la posición inicial.",
-                "Url":""
-             },
-             {
-                "id":103,
-                "nombre":"Press inclinado",
-                "Descripcion":"Te recuestas en un banco inclinado y tomas una barra o mancuernas. Empujas el peso hacia arriba desde la altura del pecho y luego bajas controladamente.",
-                "Url":""
-             },
-             {
-                "id":104,
-                "nombre":"Press de banca con mancuerna",
-                "Descripcion":"Te recuestas en un banco plano con una mancuerna en cada mano. Empujas el peso hacia arriba desde la altura del pecho y luego bajas lentamente hasta casi tocar el pecho.",
-                "Url":""
-             }
-          ]
-       },
-       {
-          "id":2,
-          "nombre":"Espalda",
-          "ejercicios":[
-             {
-                "id":201,
-                "nombre":"Dominadas",
-                "Descripcion":"Cuelgas de una barra con las palmas hacia adelante. Jalando con los brazos, llevas tu barbilla por encima de la barra y luego bajas controladamente.",
-                "Url":""
-             },
-             {
-                "id":202,
-                "nombre":"Remo con barra",
-                "Descripcion":"Te inclinas hacia adelante con una barra en las manos. Tiras de la barra hacia tu abdomen, manteniendo la espalda recta y los codos cerca del cuerpo.",
-                "Url":""
-             },
-             {
-                "id":203,
-                "nombre":"Remo en máquina",
-                "Descripcion":"Te sientas en una máquina de remo y tiras de las manijas hacia tu abdomen, manteniendo la espalda recta y los codos cerca del cuerpo.",
-                "Url":""
-             },
-             {
-                "id":204,
-                "nombre":"Remo con mancuerna",
-                "Descripcion":"Te inclinas hacia adelante con una mancuerna en cada mano. Tiras de las mancuernas hacia tu abdomen, manteniendo la espalda recta y los codos cerca del cuerpo.",
-                "Url":""
-             }
-          ]
-       },
-       {
-          "id":3,
-          "nombre":"Piernas",
-          "ejercicios":[
-            {
-                "id": 301,
-                "nombre": "Sentadillas",
-                "Descripcion": "Te colocas de pie con los pies al ancho de los hombros. Flexionas las rodillas y bajas el cuerpo como si fueras a sentarte, manteniendo la espalda recta. Luego regresas a la posición inicial.",
-                "Url": ""
-              },
-              {
-                "id": 302,
-                "nombre": "Prensa de piernas",
-                "Descripcion": "Te sientas en la máquina de prensa con los pies apoyados en la plataforma. Empujas la plataforma con las piernas hasta estirarlas casi por completo, y luego bajas controladamente.",
-                "Url": ""
-              },
-              {
-                "id": 303,
-                "nombre": "Desplantes",
-                "Descripcion": "Das un paso hacia adelante con una pierna y flexionas ambas rodillas hasta que la rodilla trasera casi toque el suelo. Luego regresas a la posición inicial y repites con la otra pierna.",
-                "Url": ""
-              },
-              {
-                "id": 304,
-                "nombre": "Peso muerto rumano",
-                "Descripcion": "De pie con una barra o mancuernas, inclinas el torso hacia adelante manteniendo la espalda recta y las piernas ligeramente flexionadas. Luego vuelves a la posición erguida.",
-                "Url": ""
-              },
-              {
-                "id": 305,
-                "nombre": "Extensión de cuadriceps",
-                "Descripcion": "Te sientas en la máquina con las piernas debajo de la almohadilla. Estiras las piernas hacia arriba hasta que estén rectas y luego las bajas controladamente.",
-                "Url": ""
-              },
-              {
-                "id": 306,
-                "nombre": "Curl femoral",
-                "Descripcion": "Te acuestas boca abajo en la máquina de curl de piernas. Flexionas las rodillas para llevar los tobillos hacia los glúteos y luego bajas controladamente.",
-                "Url": ""
-              },
-              {
-                "id": 307,
-                "nombre": "Elevación de talones (gemelos)",
-                "Descripcion": "De pie sobre una superficie elevada, subes y bajas los talones para trabajar los músculos de la pantorrilla.",
-                "Url": ""
-              },
-              {
-                "id": 308,
-                "nombre": "Sentadilla búlgara",
-                "Descripcion": "Colocas un pie en un banco detrás de ti y bajas el cuerpo flexionando la rodilla delantera. Luego regresas a la posición inicial.",
-                "Url": ""
-              },
-              {
-                "id": 309,
-                "nombre": "Aductor de piernas",
-                "Descripcion": "Te sientas en la máquina con las piernas abiertas. Juntas las piernas contra la resistencia y luego las separas controladamente.",
-                "Url": ""
-              },
-              {
-                "id": 310,
-                "nombre": "Abductor de piernas",
-                "Descripcion": "Te sientas en la máquina con las piernas juntas. Separas las piernas contra la resistencia y luego las juntas controladamente.",
-                "Url": ""
-              }
-          ]
-       },
-       {
-         "id": 4,
-         "nombre": "Hombros",
-         "ejercicios": [
-           {
-             "id": 401,
-             "nombre": "Press militar",
-             "Descripcion": "De pie o sentado, empujas una barra o mancuernas hacia arriba desde los hombros hasta estirar completamente los brazos.",
-             "Url": ""
-           },
-           {
-             "id": 402,
-             "nombre": "Elevaciones laterales",
-             "Descripcion": "De pie con una mancuerna en cada mano, levantas los brazos lateralmente hasta la altura de los hombros y luego bajas controladamente.",
-             "Url": ""
-           },
-           {
-             "id": 403,
-             "nombre": "Jalon con cuerda para hombro posterior",
-             "Descripcion": "Te pones en la polea alta y jalas la cuerd a hacia tu cara, manteniendo los codos altos y la espalda recta.",
-             "Url": ""
-           }
-         ]
-       },
-       {
-         "id": 5,
-         "nombre": "Bíceps y antebrazo",
-         "ejercicios": [
-           {
-             "id": 501,
-             "nombre": "Curl con barra",
-             "Descripcion": "De pie, tomas una barra con las palmas hacia arriba y la llevas hacia el pecho flexionando los codos.",
-             "Url": ""
-           },
-           {
-             "id": 502,
-             "nombre": "Curl martillo",
-             "Descripcion": "Igual que el curl con mancuernas pero con las palmas enfrentadas durante todo el movimiento.",
-             "Url": ""
-           },
-           {
-             "id": 503,
-             "nombre": "Curl predicador",
-             "Descripcion": "Sentado en un banco predicador, apoyas los brazos en la almohadilla y haces curl con una barra o mancuerna.",
-             "Url": ""
-           },
-           {
-               "id": 504,
-               "nombre": "Curl con agarre prono",
-               "Descripcion": "De pie, tomas una barra con las palmas hacia abajo y la llevas hacia el pecho flexionando los codos.",
-               "Url": ""
-           }
-         ]
-       },
-       {
-         "id": 6,
-         "nombre": "Tríceps",
-         "ejercicios": [
-           {
-             "id": 601,
-             "nombre": "Extension de tricpes ",
-             "Descripcion": "Pones la polea en la parte alta, agarras la cuerda y jalas hacia abajo, estirando el brazo completamente.",
-             "Url": ""
-           },
-           {
-             "id": 602,
-             "nombre": "Rompecraneos en polea", 
-             "Descripcion": "Agarras la polea y la pones a la altura de cintura y jalas por arriba de la cabeza.",
-             "Url": ""
-           }
-         ]
-       }
-    ]
- }
-
- 
+  "grupos_musculares": [
+    {
+      "id": 1,
+      "nombre": "Pecho",
+      "ejercicios": [
+        {
+          "id": 101,
+          "nombre": "Press de banca",
+          "Descripcion": "Te recuestas en un banco plano con una barra o mancuernas. Empujas el peso hacia arriba desde la altura del pecho y luego bajas lentamente hasta casi tocar el pecho.",
+          "Url": ""
+        },
+        {
+          "id": 102,
+          "nombre": "Chest flyes",
+          "Descripcion": "Te recuestas en un banco plano o inclinado, sosteniendo una mancuerna en cada mano. Con los codos ligeramente flexionados, abres los brazos hacia los lados hasta sentir un estiramiento en el pecho. Regresas controladamente a la posición inicial.",
+          "Url": ""
+        },
+        {
+          "id": 103,
+          "nombre": "Press inclinado",
+          "Descripcion": "Te recuestas en un banco inclinado y tomas una barra o mancuernas. Empujas el peso hacia arriba desde la altura del pecho y luego bajas controladamente.",
+          "Url": ""
+        },
+        {
+          "id": 104,
+          "nombre": "Press de banca con mancuerna",
+          "Descripcion": "Te recuestas en un banco plano con una mancuerna en cada mano. Empujas el peso hacia arriba desde la altura del pecho y luego bajas lentamente hasta casi tocar el pecho.",
+          "Url": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Espalda",
+      "ejercicios": [
+        {
+          "id": 201,
+          "nombre": "Dominadas",
+          "Descripcion": "Cuelgas de una barra con las palmas hacia adelante. Jalando con los brazos, llevas tu barbilla por encima de la barra y luego bajas controladamente.",
+          "Url": ""
+        },
+        {
+          "id": 202,
+          "nombre": "Remo con barra",
+          "Descripcion": "Te inclinas hacia adelante con una barra en las manos. Tiras de la barra hacia tu abdomen, manteniendo la espalda recta y los codos cerca del cuerpo.",
+          "Url": ""
+        },
+        {
+          "id": 203,
+          "nombre": "Remo en máquina",
+          "Descripcion": "Te sientas en una máquina de remo y tiras de las manijas hacia tu abdomen, manteniendo la espalda recta y los codos cerca del cuerpo.",
+          "Url": ""
+        },
+        {
+          "id": 204,
+          "nombre": "Remo con mancuerna",
+          "Descripcion": "Te inclinas hacia adelante con una mancuerna en cada mano. Tiras de las mancuernas hacia tu abdomen, manteniendo la espalda recta y los codos cerca del cuerpo.",
+          "Url": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Piernas",
+      "ejercicios": [
+        {
+          "id": 301,
+          "nombre": "Sentadillas",
+          "Descripcion": "Te colocas de pie con los pies al ancho de los hombros. Flexionas las rodillas y bajas el cuerpo como si fueras a sentarte, manteniendo la espalda recta. Luego regresas a la posición inicial.",
+          "Url": ""
+        },
+        {
+          "id": 302,
+          "nombre": "Prensa de piernas",
+          "Descripcion": "Te sientas en la máquina de prensa con los pies apoyados en la plataforma. Empujas la plataforma con las piernas hasta estirarlas casi por completo, y luego bajas controladamente.",
+          "Url": ""
+        },
+        {
+          "id": 303,
+          "nombre": "Desplantes",
+          "Descripcion": "Das un paso hacia adelante con una pierna y flexionas ambas rodillas hasta que la rodilla trasera casi toque el suelo. Luego regresas a la posición inicial y repites con la otra pierna.",
+          "Url": ""
+        },
+        {
+          "id": 304,
+          "nombre": "Peso muerto rumano",
+          "Descripcion": "De pie con una barra o mancuernas, inclinas el torso hacia adelante manteniendo la espalda recta y las piernas ligeramente flexionadas. Luego vuelves a la posición erguida.",
+          "Url": ""
+        },
+        {
+          "id": 305,
+          "nombre": "Extensión de cuadriceps",
+          "Descripcion": "Te sientas en la máquina con las piernas debajo de la almohadilla. Estiras las piernas hacia arriba hasta que estén rectas y luego las bajas controladamente.",
+          "Url": ""
+        },
+        {
+          "id": 306,
+          "nombre": "Curl femoral",
+          "Descripcion": "Te acuestas boca abajo en la máquina de curl de piernas. Flexionas las rodillas para llevar los tobillos hacia los glúteos y luego bajas controladamente.",
+          "Url": ""
+        },
+        {
+          "id": 307,
+          "nombre": "Elevación de talones (gemelos)",
+          "Descripcion": "De pie sobre una superficie elevada, subes y bajas los talones para trabajar los músculos de la pantorrilla.",
+          "Url": ""
+        },
+        {
+          "id": 308,
+          "nombre": "Sentadilla búlgara",
+          "Descripcion": "Colocas un pie en un banco detrás de ti y bajas el cuerpo flexionando la rodilla delantera. Luego regresas a la posición inicial.",
+          "Url": ""
+        },
+        {
+          "id": 309,
+          "nombre": "Aductor de piernas",
+          "Descripcion": "Te sientas en la máquina con las piernas abiertas. Juntas las piernas contra la resistencia y luego las separas controladamente.",
+          "Url": ""
+        },
+        {
+          "id": 310,
+          "nombre": "Abductor de piernas",
+          "Descripcion": "Te sientas en la máquina con las piernas juntas. Separas las piernas contra la resistencia y luego las juntas controladamente.",
+          "Url": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Hombros",
+      "ejercicios": [
+        {
+          "id": 401,
+          "nombre": "Press militar",
+          "Descripcion": "De pie o sentado, empujas una barra o mancuernas hacia arriba desde los hombros hasta estirar completamente los brazos.",
+          "Url": ""
+        },
+        {
+          "id": 402,
+          "nombre": "Elevaciones laterales",
+          "Descripcion": "De pie con una mancuerna en cada mano, levantas los brazos lateralmente hasta la altura de los hombros y luego bajas controladamente.",
+          "Url": ""
+        },
+        {
+          "id": 403,
+          "nombre": "Jalon con cuerda para hombro posterior",
+          "Descripcion": "Te pones en la polea alta y jalas la cuerd a hacia tu cara, manteniendo los codos altos y la espalda recta.",
+          "Url": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "Bíceps y antebrazo",
+      "ejercicios": [
+        {
+          "id": 501,
+          "nombre": "Curl con barra",
+          "Descripcion": "De pie, tomas una barra con las palmas hacia arriba y la llevas hacia el pecho flexionando los codos.",
+          "Url": ""
+        },
+        {
+          "id": 502,
+          "nombre": "Curl martillo",
+          "Descripcion": "Igual que el curl con mancuernas pero con las palmas enfrentadas durante todo el movimiento.",
+          "Url": ""
+        },
+        {
+          "id": 503,
+          "nombre": "Curl predicador",
+          "Descripcion": "Sentado en un banco predicador, apoyas los brazos en la almohadilla y haces curl con una barra o mancuerna.",
+          "Url": ""
+        },
+        {
+          "id": 504,
+          "nombre": "Curl con agarre prono",
+          "Descripcion": "De pie, tomas una barra con las palmas hacia abajo y la llevas hacia el pecho flexionando los codos.",
+          "Url": ""
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "nombre": "Tríceps",
+      "ejercicios": [
+        {
+          "id": 601,
+          "nombre": "Extension de tricpes ",
+          "Descripcion": "Pones la polea en la parte alta, agarras la cuerda y jalas hacia abajo, estirando el brazo completamente.",
+          "Url": ""
+        },
+        {
+          "id": 602,
+          "nombre": "Rompecraneos en polea",
+          "Descripcion": "Agarras la polea y la pones a la altura de cintura y jalas por arriba de la cabeza. s ",
+          "Url": ""
+        }
+      ]
+    }
+  ]
+}
