@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 import { Geolocation } from '@capacitor/geolocation';
 import * as L from 'leaflet';
@@ -10,38 +9,41 @@ import * as L from 'leaflet';
   templateUrl: './gym-cerca.page.html',
   styleUrls: ['./gym-cerca.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule]
 })
-export class GymCercaPage implements OnInit {
+export class GymCercaPage {
+  map!: L.Map;
 
-  constructor() { }
-  map: L.Map = {} as L.Map;
-
-  ngOnInit() {
+  ionViewDidEnter() {
     this.loadMap();
   }
-  async getUserLocation() {
-    const coordinates = await Geolocation.getCurrentPosition();
-    console.log('Current position:', coordinates);
-  }
-
-
-
 
   async loadMap() {
-    const coordinates = await Geolocation.getCurrentPosition();
-    const lat = coordinates.coords.latitude;
-    const lon = coordinates.coords.longitude;
-  
-    this.map = L.map('map').setView([lat, lon], 15);
-  
+    const mapContainer = document.getElementById('map');
+    if (!mapContainer) {
+      console.error('Contenedor del mapa no encontrado');
+      return;
+    }
+
+    const coords = await Geolocation.getCurrentPosition();
+    const lat = coords.coords.latitude;
+    const lon = coords.coords.longitude;
+
+    this.map = L.map(mapContainer).setView([lat, lon], 15);
+
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors'
+      attribution: '© OpenStreetMap contributors',
+      maxZoom: 19,
     }).addTo(this.map);
-  
-    L.marker([lat, lon]).addTo(this.map)
+
+    L.marker([lat, lon])
+      .addTo(this.map)
       .bindPopup('Estás aquí')
       .openPopup();
-  }
 
+      requestAnimationFrame(() => {
+        this.map.invalidateSize();
+      });
+      
+  }
 }
