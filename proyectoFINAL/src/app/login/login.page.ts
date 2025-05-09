@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -7,20 +8,27 @@ import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButton]
+  selector: 'app-login',
+  templateUrl: './login.page.html',
+  styleUrls: ['./login.page.scss'],
+  standalone: true,
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
-export class HomePage {
+export class LoginPage implements OnInit {
 
   constructor(
     private alertController: AlertController,
     private router: Router,
     private authService: AuthService,
+
   ) { }
+
   ngOnInit() {
   }
+
+
+
+
   emailInput: string = '';
   passwordInput: string = '';
   async onSubmit() {
@@ -29,14 +37,14 @@ export class HomePage {
 
 
     try {
-      await this.authService.register(this.emailInput, this.passwordInput);
+      await this.authService.logine(this.emailInput, this.passwordInput);
       const alert = await this.alertController.create({
-        header: 'Sesion creada',
-        message: 'Tu sesion a sido creada con exito',
+        header: 'Sesion iniciada',
+        message: 'Tu sesion a sido enviado iniciada',
         buttons: ['OK'],
       });
       await alert.present();
-      this.router.navigateByUrl("login");
+      this.router.navigateByUrl("gym-cerca");
     } catch (error) {
       const alert = await this.alertController.create({
         header: 'ERROR',
@@ -46,7 +54,16 @@ export class HomePage {
       await alert.present();
     }
   }
+
+
+  validateEmail(email: string): boolean {
+    const emailPattern = /^[a-zA-Z0-9_.±]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/;
+    return emailPattern.test(email);
+  }
   onSignUp() {
-    this.router.navigateByUrl("login");
+    this.router.navigateByUrl("home");
+  }
+  onForgot() {
+    this.router.navigateByUrl("forgot");
   }
 }
