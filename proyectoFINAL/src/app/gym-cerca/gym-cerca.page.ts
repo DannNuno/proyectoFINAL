@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar,IonItem, IonInput, IonLabel, IonTextarea, IonButton } from '@ionic/angular/standalone';
 import { Geolocation } from '@capacitor/geolocation';
 import * as L from 'leaflet';
 
@@ -9,9 +9,10 @@ import * as L from 'leaflet';
   templateUrl: './gym-cerca.page.html',
   styleUrls: ['./gym-cerca.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule]
+  imports: [IonTextarea, IonInput, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, IonItem, IonLabel, IonButton ]
 })
 export class GymCercaPage {
+  // constructor(private firestore: Firestore) {}
   map!: L.Map;
 
   ionViewDidEnter() {
@@ -44,6 +45,81 @@ export class GymCercaPage {
       requestAnimationFrame(() => {
         this.map.invalidateSize();
       });
+
+ // gimnasios cerca
+      const overpassUrl = 'https://overpass-api.de/api/interpreter';
+      const query = `
+        [out:json];
+        node
+          ["leisure"="fitness_centre"]
+          (around:3000,${lat},${lon});
+        out;
+      `;
       
+      fetch(overpassUrl, {
+        method: 'POST',
+        body: query
+      })
+      .then(res => res.json())
+      .then(data => {
+        data.elements.forEach((element: any) => {
+          L.marker([element.lat, element.lon])
+            .addTo(this.map)
+            .bindPopup(element.tags.name || 'Gimnasio desconocido');
+        });
+      })
+      .catch(err => console.error('Error al obtener gimnasios:', err));
+      
+
+      // por si no hay alguno que se pueda agregar manualmente
+
+      // async agregarGimnasio() {
+      //   const position = await Geolocation.getCurrentPosition();
+      //   const lat = position.coords.latitude;
+      //   const lng = position.coords.longitude;
+    
+      //   const gimnasio = {
+      //     nombre: this.nombre,
+      //     descripcion: this.descripcion,
+      //     latitud: lat,
+      //     longitud: lng
+      //   };
+    
+      //   const gimnasiosRef = collection(this.firestore, 'gimnasios');
+      //   await addDoc(gimnasiosRef, gimnasio);
+    
+      //   console.log('Gimnasio agregado');
+      // }
+
+
+      // const gimnasio = {
+      //   nombre: this.nombre,
+      //   descripcion: this.descripcion,
+      //   latitud: lat,
+      //   longitud: lng
+      // };
+      
+
+
+
+
+      // this.map.on('click', (e: any) => {
+      //   const lat = e.latlng.lat;
+      //   const lon = e.latlng.lng;
+      
+      //   const popupContent = `
+      //     <div>
+      //       <label>Nombre del gimnasio:</label><br>
+      //       <input id="gymName" type="text" /><br>
+      //       <button onclick="saveGym(${lat}, ${lon})">Guardar</button>
+      //     </div>
+      //   `;
+      
+      //   L.popup()
+      //     .setLatLng([lat, lon])
+      //     .setContent(popupContent)
+      //     .openOn(this.map);
+      // });
+
   }
 }
