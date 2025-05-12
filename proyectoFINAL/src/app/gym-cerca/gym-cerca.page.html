@@ -2,14 +2,12 @@
   <ion-toolbar>
     <ion-title>Gimnasios Cerca</ion-title>
   </ion-toolbar>
-  <link
-  rel="stylesheet"
-  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </ion-header>
 
 <ion-content fullscreen="true">
-  <!-- <form (submit)="agregarGimnasio()">
+  <!-- Formulario para agregar gimnasio -->
+  <form (submit)="agregarGimnasio()">
     <ion-item>
       <ion-label position="floating">Nombre</ion-label>
       <ion-input [(ngModel)]="nombre" name="nombre" required></ion-input>
@@ -18,8 +16,8 @@
       <ion-label position="floating">Descripción</ion-label>
       <ion-textarea [(ngModel)]="descripcion" name="descripcion"></ion-textarea>
     </ion-item>
-    <ion-button expand="block" type="submit">Guardar ubicación actual</ion-button>
-  </form> -->
-  
+    <ion-button expand="block" type="submit">Guardar Gimnasio</ion-button>
+  </form>
+
   <div id="map" style="height: 100%;"></div>
 </ion-content>
