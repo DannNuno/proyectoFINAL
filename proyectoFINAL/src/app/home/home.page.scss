@@ -31,3 +31,20 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.profile-img {
+  width: 70%;
+  height: 70%;
+}
+
+.roboto-font {
+
+  font-family: 'Roboto', sans-serif;
+}

@@ -2,9 +2,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="roboto-font">
   <ion-menu side="end" contentId="main-content">
     <ion-header>
       <ion-toolbar>
@@ -29,17 +31,23 @@
   <div class="ion-page" id="main-content">
     <ion-header>
       <ion-toolbar>
-        <ion-title>TrainWise</ion-title>
+        <ion-title style="text-align: center;">TrainWise</ion-title>
         <ion-buttons slot="end">
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
       </ion-toolbar>
     </ion-header>
   </div>
-
+  <div class="image-container">
+    <ion-img class="profile-img" src="assets/images/Gus.png" alt="error"></ion-img>
+  </div>
+  <div style="text-align: center; font-size: 80px; margin-top: 30px;">
+    Entrena tu cuerpo
+  </div>
 
 
 </ion-content>
+
 <form #registerForm="ngForm" (ngSubmit)="onSubmit()">
   <input type="email" id="email" name="email" [(ngModel)]="emailInput"
     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
