@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './gym-cerca.page.html',
   styleUrls: ['./gym-cerca.page.scss'],
   standalone: true,
-  imports: [ IonInput, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, IonItem, IonLabel, IonButton,FormsModule ]
+  imports: [ IonInput, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, IonItem,  IonButton,FormsModule ]
 })
 export class GymCercaPage {
   // constructor(private firestore: Firestore) {}

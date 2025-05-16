@@ -25,5 +25,9 @@ export const routes: Routes = [
     path: 'forgot',
     loadComponent: () => import('./forgot/forgot.page').then( m => m.ForgotPage)
   },
+  {
+    path: 'index',
+    loadComponent: () => import('./index/index.page').then( m => m.IndexPage)
+  },
 
 ];
