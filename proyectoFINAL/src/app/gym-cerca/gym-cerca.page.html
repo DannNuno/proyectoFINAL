@@ -7,17 +7,7 @@
 
 <ion-content fullscreen="true">
   <!-- Formulario para agregar gimnasio -->
-  <form (submit)="agregarGimnasio()">
-    <ion-item>
-      <ion-label position="floating">Nombre</ion-label>
-      <ion-input [(ngModel)]="nombre" name="nombre" required></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Descripción</ion-label>
-      <ion-textarea [(ngModel)]="descripcion" name="descripcion"></ion-textarea>
-    </ion-item>
-    <ion-button expand="block" type="submit">Guardar Gimnasio</ion-button>
-  </form>
+
 
   <div id="map" style="height: 100%;"></div>
 </ion-content>
