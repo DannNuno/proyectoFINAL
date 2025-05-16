@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { IonContent, IonHeader, IonTitle, IonToolbar,IonItem, IonInput, IonLabel, IonTextarea, IonButton } from '@ionic/angular/standalone';
 import { Geolocation } from '@capacitor/geolocation';
 import * as L from 'leaflet';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-gym-cerca',
   templateUrl: './gym-cerca.page.html',
   styleUrls: ['./gym-cerca.page.scss'],
   standalone: true,
-  imports: [IonTextarea, IonInput, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, IonItem, IonLabel, IonButton ]
+  imports: [ IonInput, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, IonItem, IonLabel, IonButton,FormsModule ]
 })
 export class GymCercaPage {
   // constructor(private firestore: Firestore) {}
@@ -122,4 +123,35 @@ export class GymCercaPage {
       // });
 
   }
+  busqueda: string = '';
+
+async buscarGimnasio() {
+  if (!this.busqueda) {
+    alert('Escribe un nombre para buscar');
+    return;
+  }
+
+  const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(this.busqueda)}`;
+  
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+
+    if (data.length === 0) {
+      alert('No se encontró el gimnasio');
+      return;
+    }
+
+    const lat = parseFloat(data[0].lat);
+    const lon = parseFloat(data[0].lon);
+
+    this.map.setView([lat, lon], 18); // Enfocar con zoom
+    L.marker([lat, lon])
+      .addTo(this.map)
+      .bindPopup(this.busqueda)
+      .openPopup();
+  } catch (err) {
+    console.error('Error al buscar gimnasio:', err);
+  }
+}
 }

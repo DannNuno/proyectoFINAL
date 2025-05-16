@@ -6,8 +6,12 @@
 </ion-header>
 
 <ion-content fullscreen="true">
-  <!-- Formulario para agregar gimnasio -->
+  <div id="map"></div>
 
+  <ion-item>
+    <ion-input [(ngModel)]="busqueda" placeholder="Buscar gimnasio"></ion-input>
+  </ion-item>
 
-  <div id="map" style="height: 100%;"></div>
+  <ion-button expand="full" (click)="buscarGimnasio()">Buscar</ion-button>
 </ion-content>
+
