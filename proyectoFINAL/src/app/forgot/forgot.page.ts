@@ -57,6 +57,6 @@ export class ForgotPage implements OnInit {
     return emailPattern.test(email);
   }
   onSignUp() {
-    this.router.navigateByUrl("home");
+    this.router.navigateByUrl("login");
   }
 }
