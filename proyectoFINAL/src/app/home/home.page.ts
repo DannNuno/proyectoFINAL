@@ -49,4 +49,7 @@ export class HomePage {
   onSignUp() {
     this.router.navigateByUrl("login");
   }
+  onHome() {
+    this.router.navigateByUrl("home");
+  }
 }

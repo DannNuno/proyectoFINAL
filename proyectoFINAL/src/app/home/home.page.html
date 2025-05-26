@@ -6,17 +6,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </ion-header>
 
-<ion-content [fullscreen]="true" class="bebas-neue-regular">
+<ion-content [fullscreen]="true" class="bebas-neue-regular" style="--background: #0D1B2A;">
   <ion-menu side="end" contentId="main-content">
     <ion-header>
-      <ion-toolbar style="--background: #00101f; --color: white;">
+      <ion-toolbar class="bebas-neue-regular" style="--background: #00101f; --color: white; font-size: 20px;">
         <ion-title>TrainWise</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-padding">
+    <ion-content class="ion-padding" >
       <ion-list>
-        <ion-item>
-          <ion-label>Crear cuenta</ion-label>
+        <ion-item (click)="onHome()">
+          <ion-label class="hover-text">Crear cuenta</ion-label>
         </ion-item>
         <ion-item (click)="onSignUp()">
           <ion-label class="hover-text">Iniciar sesión</ion-label>
@@ -51,6 +51,9 @@
   </div>
 
   <div class="form-container ion-padding">
+    <div style=" text-align: center; font-size: 30px;">
+    Crea tu cuenta y comienza a entrenar con nosotros.
+  </div>
     <form #registerForm="ngForm" (ngSubmit)="onSubmit()">
       <input type="email" id="email" name="email" [(ngModel)]="emailInput"
         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -62,14 +65,14 @@
       
       <div style="text-align: center;">
         <button style="margin-top: 10px;" type="submit"
-          class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+        class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 "
           [disabled]="registerForm.invalid">
           Crear cuenta
         </button>
 
         <button (click)="onSignUp()" type="button"
-          class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
-          Ir a inicio de sesión
+        class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">
+          Iniciar sesión
         </button>
       </div>
     </form>
