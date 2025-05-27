@@ -29,5 +29,9 @@ export const routes: Routes = [
     path: 'index',
     loadComponent: () => import('./index/index.page').then( m => m.IndexPage)
   },
+  {
+    path: 'comentarios',
+    loadComponent: () => import('./comentarios/comentarios.page').then( m => m.ComentariosPage)
+  },
 
 ];
