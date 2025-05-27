@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+
 import { Firestore, collection, addDoc, collectionData, query, orderBy } from '@angular/fire/firestore';
 import { Auth } from '@angular/fire/auth';
 import { Timestamp } from 'firebase/firestore';
@@ -25,23 +26,29 @@ export class ComentariosPage {
   }
 
   async agregarComentario() {
-    const user = this.auth.currentUser;
+    const user = await this.auth.currentUser;
     if (!user) {
       alert('Debes iniciar sesión para comentar.');
       return;
     }
 
-    const comentariosRef = collection(this.firestore, 'comentarios');
-
-    await addDoc(comentariosRef, {
+    const nuevoComentario = {
       correo: user.email,
       nombre: this.nombre,
       comentario: this.comentario,
-      fecha: Timestamp.fromDate(new Date())
-    });
+      fecha: Timestamp.fromDate(new Date()),
+    };
 
-    this.nombre = '';
-    this.comentario = '';
+    const comentariosRef = collection(this.firestore, 'comentarios');
+
+    try {
+      await addDoc(comentariosRef, nuevoComentario);
+      console.log('Comentario enviado');
+      this.nombre = '';
+      this.comentario = '';
+    } catch (error) {
+      console.error('Error al enviar comentario:', error);
+    }
   }
 
   cargarComentarios() {
