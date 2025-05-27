@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
- 
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
@@ -8,63 +8,29 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" style="--background: #0D1B2A;">
-  <ion-menu side="end" contentId="main-content">
-    <ion-header>
-      <ion-toolbar class="bebas-neue-regular" style="--background: #00101f; --color: white; font-size: 20px;">
-        <ion-title>TrainWise</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding" >
-      <ion-list>
-        <ion-item (click)="onHome()">
-          <ion-label class="hover-text">Crear cuenta</ion-label>
-        </ion-item>
-        <ion-item (click)="onSignUp()">
-          <ion-label class="hover-text">Iniciar sesión</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
-
-  <div class="ion-page" id="main-content" style="background: #00101f;">
-    <ion-header>
-      <ion-toolbar style="--background: #00101f; --color: white;">
-        <ion-buttons slot="start">
-          <div style="display: flex; align-items: center; padding-left: 10px;">
-            <ion-img src="assets/images/logo.png" style="width: 200px; height: 200px;"></ion-img>
-          </div>
-          <ion-title class="bebas-neue-regular" style="font-size: 80px; text-align: center;">INICIAR SESION
-          </ion-title>
-        </ion-buttons>
-
-        <ion-buttons slot="end">
-          <ion-menu-button></ion-menu-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
-  </div>
   <div class="form-container ion-padding">
-  <form #registerForm="ngForm" (ngSubmit)="onSubmit()">
-    <input type="email" id="email" name="email" [(ngModel)]="emailInput"
-      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-      placeholder="Agrega correo" required #email="ngModel" />
-    <input type="password" id="password" name="password" [(ngModel)]="passwordInput"
-      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-      placeholder="Agrega contraseña" required #password="ngModel" />
-    <button type="submit"
-      class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
-      [disabled]="registerForm.invalid">
-      Iniciar sesión
+    <form #registerForm="ngForm" (ngSubmit)="onSubmit()">
+      <input type="email" id="email" name="email" [(ngModel)]="emailInput"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="Agrega correo" required #email="ngModel" />
+      <input type="password" id="password" name="password" [(ngModel)]="passwordInput"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="Agrega contraseña" required #password="ngModel" />
+      <button type="submit"
+        class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+        [disabled]="registerForm.invalid">
+        Iniciar sesión
+      </button>
+
+    </form>
+    <button (click)="onSignUp()" type="button"
+      class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+      Crear cuenta
     </button>
-    
-  </form>
-  <button (click)="onSignUp()" type="button"
-    class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
-    Crear cuenta
-  </button>
-  <button (click)="onForgot()" type="button"
-    class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
-    Olvide mi contraseña
-  </button>
-</div>
+    <button (click)="onForgot()" type="button"
+      class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+      Olvide mi contraseña
+    </button>
+  </div>
+
 </ion-content>
