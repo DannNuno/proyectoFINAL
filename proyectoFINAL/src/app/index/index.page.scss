@@ -1,0 +1,43 @@
+.redireccionar{
+    // height: 300px;
+    // width: 400px;
+   height: 25vh;
+   width: 25vw;
+   border-radius: 10px;
+   
+}
+.redireccionar:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+    
+}
+.imagenes
+{
+    display: flex;
+    flex-direction: row;
+    padding-top: 150px;
+    align-items: flex-start;
+    justify-content: center;
+    height: 10%;
+    gap: 50px;
+    
+    
+  
+}
+ion-button {
+    --background-color: #007bff;
+    
+    --border-radius: 10px;
+    --padding-start: 20px;
+    --padding-end: 20px;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    --color: white;
+    
+}
+.texto {
+    padding-top: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+}
