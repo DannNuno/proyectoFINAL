@@ -4,7 +4,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar,IonItem, IonInput, IonLabel
 import { Geolocation } from '@capacitor/geolocation';
 import * as L from 'leaflet';
 import { FormsModule } from '@angular/forms';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-gym-cerca',
   templateUrl: './gym-cerca.page.html',
@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
   imports: [ IonInput, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, IonItem,  IonButton,FormsModule ]
 })
 export class GymCercaPage {
-  // constructor(private firestore: Firestore) {}
+   constructor(private router: Router) {}
   map!: L.Map;
 
   ionViewDidEnter() {
@@ -154,4 +154,8 @@ async buscarGimnasio() {
     console.error('Error al buscar gimnasio:', err);
   }
 }
+  navigateToIndex(){
+    this.router.navigateByUrl("index");
+  }
+
 }

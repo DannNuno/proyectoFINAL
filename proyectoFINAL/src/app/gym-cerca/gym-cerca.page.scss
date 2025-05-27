@@ -23,8 +23,18 @@ ion-item, ion-button {
   width: 90%;
   max-width: 400px;
   display: block;
+ 
 }
 ion-title{
   text-align: center;
   margin-top: 10px;
+}
+ion-button{
+  --background: linear-gradient(45deg, #007bff, #0056b3);
+  --color: white;
+  --border-radius: 10px;
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
 }
