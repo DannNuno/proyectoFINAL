@@ -1,23 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <h1 class="borel-regular" style="text-align: center; font-size: 60px; padding-top: 30px;">Contraseña olvidada</h1>
+    <div style="display: flex; align-items: center; padding-left: 10px; background: #00101f; ">
+      <ion-img src="assets/images/logo.png" style="width: 200px; height: 200px;"></ion-img>
+      <ion-title class="bebas-neue-regular" style="font-size: 80px; color: white;">Recuperar cuenta</ion-title>
+    </div>
   </ion-toolbar>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <form #registerForm="ngForm" (ngSubmit)="onSubmit()">
 
-    <input type="email" id="email" name="email" [(ngModel)]="emailInput"
-      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-      placeholder="Agrega correo" required #email="ngModel" />
-    <button type="submit"
-      class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
-      [disabled]="registerForm.invalid">
-      Enviar Contraseña
-    </button>
-  </form>
-  <button (click)="onSignUp()" type="button"
-    class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
-    Ir a iniciar sesion
-  </button>
+<ion-content [fullscreen]="true" style="--background: #0D1B2A;">
+  <div class="form-container ion-padding">
+    <form #registerForm="ngForm" (ngSubmit)="onSubmit()">
+      <input type="email" id="email" name="email" [(ngModel)]="emailInput"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="Agrega correo" required #email="ngModel" />
+      <button type="submit"
+        class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 "
+        [disabled]="registerForm.invalid">
+        Enviar Contraseña
+      </button>
+      <button (click)="onSignUp()" type="button"
+        class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">
+        Ir a iniciar sesion
+      </button>
+    </form>
+  </div>
 </ion-content>
