@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton } from '@ionic/angular/standalone';
+import { IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonTitle, IonToolbar, IonButton, IonList, IonLabel, IonItem, IonImg } from '@ionic/angular/standalone';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
@@ -12,7 +12,7 @@ import { AuthService } from '../auth.service';
   templateUrl: './forgot.page.html',
   styleUrls: ['./forgot.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButton]
+  imports: [IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonTitle, IonToolbar, IonButton, IonList, IonLabel, IonItem, IonImg, CommonModule, FormsModule]
 })
 export class ForgotPage implements OnInit {
 
