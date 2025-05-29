@@ -1,0 +1,74 @@
+ion-title {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 28px;
+  color: #a0cfff;  // azul claro para título
+  text-align: center;
+}
+
+.boton-volver {
+  margin-bottom: 20px;
+  --background: #25303b;  // azul muy oscuro
+  --color: #a0cfff;       // azul claro texto
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.comentario-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+ion-item {
+  --background: #1e272e;  // gris muy oscuro
+  border-radius: 10px;
+  color: #cdd4db;          // gris claro texto
+}
+
+ion-label {
+  color: #9aa5b1;          // etiqueta gris suave
+  font-weight: 600;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+ion-input, ion-textarea {
+  color: #cdd4db;          // texto entrada claro
+}
+
+.enviar-boton {
+  --background: radial-gradient(circle, #4a90e2, #1a2b5a);
+  --border-radius: 10px;
+  --color: #dceeff;
+  font-weight: bold;
+}
+
+.lista-comentarios ion-item {
+  --background: #121820;  // casi negro para comentarios
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  color: #d0d8e6;
+}
+
+.lista-comentarios h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #9db4d1;
+}
+
+.lista-comentarios p {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #bcc7d6;
+}
+
+.estrellas {
+  margin-top: 5px;
+  display: flex;
+  gap: 4px;
+}
+
+ion-icon[color="warning"] {
+  color: #f9d71c !important;  // amarillo fuerte para estrellas
+}

@@ -5,7 +5,13 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <form (submit)="agregarComentario(); $event.preventDefault()">
+
+  <ion-button (click)="volverAlInicio()" expand="block" color="medium" class="boton-volver">
+    <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+    Volver al inicio
+  </ion-button>
+
+  <form (submit)="agregarComentario(); $event.preventDefault()" class="comentario-form">
     <ion-item>
       <ion-label position="floating">Nombre</ion-label>
       <ion-input [(ngModel)]="nombre" name="nombre" required></ion-input>
@@ -16,16 +22,37 @@
       <ion-textarea [(ngModel)]="comentario" name="comentario" required></ion-textarea>
     </ion-item>
 
-    <ion-button expand="full" type="submit">Enviar Comentario</ion-button>
+    <ion-item>
+      <ion-label>Calificación</ion-label>
+      <ion-buttons slot="end">
+        <ion-button *ngFor="let star of [1,2,3,4,5]" fill="clear" (click)="calificacion = star">
+          <ion-icon
+            [name]="star <= calificacion ? 'star' : 'star-outline'"
+            slot="icon-only"
+            color="warning">
+          </ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <ion-button expand="full" type="submit" class="ion-margin-top enviar-boton">Enviar Comentario</ion-button>
   </form>
 
-  <ion-list>
+  <ion-list class="ion-margin-top lista-comentarios">
     <ion-item *ngFor="let c of comentarios">
       <ion-label>
         <h2>{{ c.nombre }} ({{ c.correo }})</h2>
         <p>{{ c.comentario }}</p>
         <ion-note>{{ c.fecha.toDate() | date:'medium' }}</ion-note>
+        <div class="estrellas">
+          <ion-icon
+            *ngFor="let star of [1,2,3,4,5]"
+            [name]="star <= c.calificacion ? 'star' : 'star-outline'"
+            color="warning">
+          </ion-icon>
+        </div>
       </ion-label>
     </ion-item>
   </ion-list>
+
 </ion-content>
