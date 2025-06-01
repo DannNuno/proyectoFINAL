@@ -2,16 +2,27 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 import { Firestore, collection, addDoc, collectionData, query, orderBy } from '@angular/fire/firestore';
 import { Auth } from '@angular/fire/auth';
 import { Timestamp } from 'firebase/firestore';
+
+import { addIcons } from 'ionicons';
+import { star, starOutline, logInOutline } from 'ionicons/icons';
+
+addIcons({
+  'star': star,
+  'star-outline': starOutline,
+  'log-in-outline': logInOutline
+});
 
 @Component({
   selector: 'app-comentarios',
   standalone: true,
   imports: [CommonModule, FormsModule, IonicModule],
   templateUrl: './comentarios.page.html',
+  styleUrls: ['./comentarios.page.scss'],
 })
 export class ComentariosPage {
   firestore = inject(Firestore);
@@ -19,11 +30,18 @@ export class ComentariosPage {
 
   nombre = '';
   comentario = '';
+  calificacion = 0;
   comentarios: any[] = [];
 
-  constructor() {
+  constructor(private router: Router) {
     this.cargarComentarios();
+    
   }
+
+  volverAlInicio() {
+    this.router.navigateByUrl('/home'); // o '/inicio' o como se llame tu ruta principal
+  }
+
 
   async agregarComentario() {
     const user = await this.auth.currentUser;
@@ -36,6 +54,7 @@ export class ComentariosPage {
       correo: user.email,
       nombre: this.nombre,
       comentario: this.comentario,
+      calificacion: this.calificacion,
       fecha: Timestamp.fromDate(new Date()),
     };
 
@@ -46,6 +65,7 @@ export class ComentariosPage {
       console.log('Comentario enviado');
       this.nombre = '';
       this.comentario = '';
+      this.calificacion = 0;
     } catch (error) {
       console.error('Error al enviar comentario:', error);
     }
