@@ -24,13 +24,13 @@ export class GrupoEjerciciosPage implements OnInit {
   ngOnInit(): void {
     
   }
-    verEjercicio(index: number) {
+    verEjercicio(id: any) {
     // Guarda el ejercicio seleccionado si quieres pasarlo completo
-    const ejercicio = this.grupo?.ejercicios?.[index];
+    const ejercicio = this.grupo?.ejercicios?.[id];
     localStorage.setItem('ejercicioActual', JSON.stringify(ejercicio));
 
     // Redirige al detalle
-    this.router.navigate(['/detalle-ejercicio', index]);
+    this.router.navigate(['/detalle-ejercicio', id ]);
   }
 
 }
