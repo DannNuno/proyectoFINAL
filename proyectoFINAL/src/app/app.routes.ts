@@ -33,5 +33,13 @@ export const routes: Routes = [
     path: 'comentarios',
     loadComponent: () => import('./comentarios/comentarios.page').then( m => m.ComentariosPage)
   },
+  {
+    path: 'grupo-ejercicios',
+    loadComponent: () => import('./grupo-ejercicios/grupo-ejercicios.page').then( m => m.GrupoEjerciciosPage)
+  },
+  {
+    path: 'detalle-ejercicio',
+    loadComponent: () => import('./detalle-ejercicio/detalle-ejercicio.page').then( m => m.DetalleEjercicioPage)
+  },
 
 ];

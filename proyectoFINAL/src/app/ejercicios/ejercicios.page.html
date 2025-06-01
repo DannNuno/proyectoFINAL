@@ -1,19 +1,15 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>ejercicios</ion-title>
-    <!-- Firebase App (core) -->
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
-
-<!-- Firebase Realtime Database -->
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js"></script>
-
+    <ion-title>Ejercicios</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">ejercicios</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-list *ngFor="let grupo of grupos" (click)="verEjercicios(grupo)" style="cursor: pointer;">
+      <ion-item-divider color="light">
+      <ion-label>
+        <h2>{{ grupo.nombre }}</h2>
+      </ion-label>
+    </ion-item-divider>  
+  </ion-list>
 </ion-content>

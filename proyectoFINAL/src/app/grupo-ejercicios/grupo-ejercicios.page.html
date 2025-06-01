@@ -1,0 +1,17 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>{{ grupo?.nombre }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item
+      button
+      *ngFor="let ejercicio of grupo?.ejercicios; let i = index"
+      (click)="verEjercicio(i)"
+    >
+      {{ ejercicio.nombre }}
+    </ion-item>
+  </ion-list>
+</ion-content>
