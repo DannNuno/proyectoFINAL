@@ -1,12 +1,15 @@
 <ion-header [translucent]="true">
-  <ion-toolbar style="--background: #00101f; --color: white; position: relative;">
-    <ion-buttons slot="start">
-      <div style="display: flex; align-items: center; gap: 10px; padding-left: 10px;">
-        <img src="assets/images/logo.png" style="width: auto; height: 100px;" alt="Logo">
-        <span class="animacion" style="font-size: 5vw; color: white;">{{ ejercicio?.nombre }}</span>
-      </div>
-    </ion-buttons>
+  <ion-toolbar>
+    <div style="display: flex; align-items: center; padding-left: 10px; background: #00101f; ">
+      <ion-img src="assets/images/logo.png" style="width: 200px; height: 200px;"></ion-img>
+      <ion-title class="bebas-neue-regular" style="font-size: 80px; color: white;">{{ ejercicio?.nombre }}  </ion-title>
+    </div>
   </ion-toolbar>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
@@ -24,6 +27,7 @@
   </ion-card>
 
   <div class="btn-center">
-    <ion-button (click)="volver()">Volver</ion-button>
+    <ion-button style="width: 100%; font-family: Bebas Neue, sans-serif;
+    font-weight: 400;" (click)="volver()">Volver</ion-button>
   </div>
 </ion-content>

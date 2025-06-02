@@ -1,12 +1,21 @@
-<ion-content>
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>{{ grupo?.nombre }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div style="display: flex; align-items: center; padding-left: 10px; background: #00101f; ">
+      <ion-img src="assets/images/logo.png" style="width: 200px; height: 200px;"></ion-img>
+      <ion-title class="bebas-neue-regular" style="font-size: 80px; color: white;">{{ grupo?.nombre }}</ion-title>
+    </div>
+  </ion-toolbar>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</ion-header>
 
+<ion-content>
   <ion-list>
-    <ion-item
+    <ion-item style="font-family: Bebas Neue, sans-serif;
+    font-weight: 400; font-size: 25px;"
       
       *ngFor="let ejercicio of grupo?.ejercicios; let i = index"
       (click)="verEjercicio(ejercicio.id) "
@@ -14,7 +23,10 @@
       {{ ejercicio.nombre }}
     </ion-item>
   </ion-list>
-  <ion-button (click)="volver()">
+  <button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 " 
+   (click)="volver()"
+   style="width: 100%; font-family: Bebas Neue, sans-serif;
+    font-weight: 400; font-size: 25px; ">
     Volver
-  </ion-button>
+</button>
 </ion-content>

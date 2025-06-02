@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar,IonList, IonItem, IonButton } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar,IonList, IonItem, IonButton,IonImg } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
+import { I } from '@angular/common/common_module.d-Qx8B6pmN';
 
 @Component({
   selector: 'app-grupo-ejercicios',
   templateUrl: './grupo-ejercicios.page.html',
   styleUrls: ['./grupo-ejercicios.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonList, IonItem,IonButton]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonList, IonItem,IonButton,IonImg]
 })
 export class GrupoEjerciciosPage implements OnInit {
 
