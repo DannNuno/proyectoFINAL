@@ -19,14 +19,10 @@ export class DetalleEjercicioPage implements OnInit {
   constructor(private sanitizer: DomSanitizer) {}
 
   ngOnInit() {
-    const data = localStorage.getItem('ejercicioActual');
-    if (data) {
-      this.ejercicio = JSON.parse(data);
-      if (this.ejercicio.video) {
-        this.videoUrlSeguro = this.sanitizer.bypassSecurityTrustResourceUrl(this.ejercicio.video);
-
-      }
-      console.log('Ejercicio cargado:', this.ejercicio);
-    }
+  const data = localStorage.getItem('ejercicioActual');
+  if (data) {
+    this.ejercicio = JSON.parse(data);
+    console.log('Ejercicio cargado:', this.ejercicio);
   }
+}
 }

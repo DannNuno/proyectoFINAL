@@ -12,20 +12,21 @@
   </ion-header>
 
   <ion-card *ngIf="ejercicio">
-    <ion-card-header>
-      <ion-card-title>{{ ejercicio.nombre }}</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <p>{{ ejercicio.Descripcion }}</p>
-      <div *ngIf="videoUrlSeguro">
-        <iframe
-          width="100%"
-          height="200"
-          [src]="videoUrlSeguro"
-          frameborder="0"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </ion-card-content>
-  </ion-card>
+  <ion-card-header>
+    <ion-card-title>{{ ejercicio.nombre }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p>{{ ejercicio.Descripcion }}</p>
+    <div *ngIf="ejercicio.Url">
+      <video 
+        controls
+        width="100%"
+        height="200"
+        [src]="ejercicio.Url"
+        type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+      </video>
+    </div>
+  </ion-card-content>
+</ion-card>
 </ion-content>

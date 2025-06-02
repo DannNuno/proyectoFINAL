@@ -11,7 +11,7 @@ import { HttpClient,HttpClientModule } from '@angular/common/http';
   templateUrl: './ejercicios.page.html',
   styleUrls: ['./ejercicios.page.scss'],
   standalone: true,
-  imports: [IonButton, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonList, IonLabel, IonItem, IonItemDivider,HttpClientModule]
+  imports: [ IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonList, IonLabel,  IonItemDivider,HttpClientModule]
 })
 export class EjerciciosPage implements OnInit {
 
