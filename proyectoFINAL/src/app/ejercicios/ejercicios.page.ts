@@ -11,7 +11,7 @@ import { HttpClient,HttpClientModule } from '@angular/common/http';
   templateUrl: './ejercicios.page.html',
   styleUrls: ['./ejercicios.page.scss'],
   standalone: true,
-  imports: [ IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonList, IonLabel,  IonItemDivider,HttpClientModule]
+  imports: [ IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonList, IonLabel,  IonItemDivider,HttpClientModule, IonButton]
 })
 export class EjerciciosPage implements OnInit {
 
@@ -31,5 +31,9 @@ export class EjerciciosPage implements OnInit {
       state: { grupo }
     });
 
+  }
+  volver() {
+    localStorage.removeItem('ejercicioActual');
+    window.history.back();
   }
 }

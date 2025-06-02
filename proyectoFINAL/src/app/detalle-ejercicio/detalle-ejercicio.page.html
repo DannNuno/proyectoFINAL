@@ -12,9 +12,7 @@
   </ion-header>
 
   <ion-card *ngIf="ejercicio">
-  <ion-card-header>
-    <ion-card-title>{{ ejercicio.nombre }}</ion-card-title>
-  </ion-card-header>
+  
   <ion-card-content>
     <p>{{ ejercicio.Descripcion }}</p>
     <div *ngIf="ejercicio.Url">
@@ -29,4 +27,8 @@
     </div>
   </ion-card-content>
 </ion-card>
+  <ion-button (click)="volver()">
+    Volver
+
+  </ion-button>
 </ion-content>

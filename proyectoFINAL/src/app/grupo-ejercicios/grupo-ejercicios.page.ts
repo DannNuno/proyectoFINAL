@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar,IonList, IonItem } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar,IonList, IonItem, IonButton } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   templateUrl: './grupo-ejercicios.page.html',
   styleUrls: ['./grupo-ejercicios.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonList, IonItem]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonList, IonItem,IonButton]
 })
 export class GrupoEjerciciosPage implements OnInit {
 
@@ -34,4 +34,9 @@ export class GrupoEjerciciosPage implements OnInit {
     this.router.navigate(['/detalle-ejercicio', id ]);
   }
 
+  volver() {
+    
+    localStorage.removeItem('ejercicioActual');
+    window.history.back();
+  }
 }
