@@ -44,7 +44,7 @@ export class LoginPage implements OnInit {
         buttons: ['OK'],
       });
       await alert.present();
-      this.router.navigateByUrl("gym-cerca");
+      this.router.navigateByUrl("index");
     } catch (error) {
       const alert = await this.alertController.create({
         header: 'ERROR',
