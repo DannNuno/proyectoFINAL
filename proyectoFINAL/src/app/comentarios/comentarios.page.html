@@ -1,14 +1,23 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Comentarios</ion-title>
+    <div style="display: flex; align-items: center; padding-left: 10px; background: #00101f; ">
+      <ion-img src="assets/images/logo.png" style="width: 200px; height: 200px;"></ion-img>
+      <ion-title class="bebas-neue-regular" style="font-size: 80px; color: white;">Comentarios</ion-title>
+    </div>
   </ion-toolbar>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </ion-header>
+
 
 <ion-content class="ion-padding">
 
   <ion-button (click)="volverAlInicio()" expand="block" color="medium" class="boton-volver">
     <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
-    Volver al inicio
+    Volver al index
   </ion-button>
 
   <form (submit)="agregarComentario(); $event.preventDefault()" class="comentario-form">

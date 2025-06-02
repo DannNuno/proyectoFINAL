@@ -39,7 +39,7 @@ export class ComentariosPage {
   }
 
   volverAlInicio() {
-    this.router.navigateByUrl('/home'); // o '/inicio' o como se llame tu ruta principal
+    this.router.navigateByUrl('/index'); 
   }
 
 
