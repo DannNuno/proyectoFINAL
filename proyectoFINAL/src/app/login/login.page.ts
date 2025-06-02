@@ -12,7 +12,7 @@ import { AuthService } from '../auth.service';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
   standalone: true,
-  imports: [IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonTitle, IonToolbar, IonButton, IonList, IonLabel, IonItem, IonImg, CommonModule, FormsModule]
+  imports: [ IonContent, IonHeader,   IonTitle, IonToolbar,  IonImg, CommonModule, FormsModule]
 })
 export class LoginPage implements OnInit {
 

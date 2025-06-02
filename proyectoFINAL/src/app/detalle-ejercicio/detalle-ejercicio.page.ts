@@ -9,7 +9,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   templateUrl: './detalle-ejercicio.page.html',
   styleUrls: ['./detalle-ejercicio.page.scss'],
   standalone: true,
-  imports: [IonButton, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonCard, IonCardHeader, IonButton, IonCardContent]
+  imports: [IonButton, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonCard,  IonButton, IonCardContent]
 })
 export class DetalleEjercicioPage implements OnInit {
 
