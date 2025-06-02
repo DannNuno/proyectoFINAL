@@ -1,0 +1,48 @@
+/* --- Estilos actualizados --- */
+ion-card {
+    --background: rgba(var(--ion-color-primary-rgb), 0.1);
+    margin: 16px;
+}
+
+ion-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    p {
+        font-size: clamp(14px, 1.5vw, 16px);
+        color: var(--ion-text-color);
+        line-height: 1.6;
+        text-align: justify;
+        margin: 10px 0;
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
+    }
+}
+
+video {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+ion-button {
+    --background: radial-gradient(circle, #007bff, #3d2aaa);
+    --border-radius: 10px;
+    --padding: 10px 20px;
+    --color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+    &:active {
+        transform: scale(0.95);
+    }
+    @media (hover: hover) {
+        &:hover {
+            --background: radial-gradient(circle, #3d2aaa, #007bff);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
