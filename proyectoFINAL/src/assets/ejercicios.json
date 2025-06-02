@@ -88,12 +88,7 @@
           "Descripcion": "Te acuestas boca abajo en la máquina de curl de piernas. Flexionas las rodillas para llevar los tobillos hacia los glúteos y luego bajas controladamente.",
           "Url": "assets/videos/curlfemoral.mp4"
         },
-        {
-          "id": 307,
-          "nombre": "Elevación de talones (gemelos)",
-          "Descripcion": "De pie sobre una superficie elevada, subes y bajas los talones para trabajar los músculos de la pantorrilla.",
-          "Url": "assets/videos/elevacionpantorrilla.mp4"
-        },
+        
         {
           "id": 308,
           "nombre": "Sentadilla búlgara",
