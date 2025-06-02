@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonContent, IonHeader, IonTitle, IonToolbar,IonItem, IonInput, IonLabel, IonTextarea, IonButton } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar,IonItem, IonInput, IonLabel, IonTextarea, IonButton, IonImg} from '@ionic/angular/standalone';
 import { Geolocation } from '@capacitor/geolocation';
 import * as L from 'leaflet';
 import { FormsModule } from '@angular/forms';
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   templateUrl: './gym-cerca.page.html',
   styleUrls: ['./gym-cerca.page.scss'],
   standalone: true,
-  imports: [ IonInput, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, IonItem,  IonButton,FormsModule ]
+  imports: [ IonInput, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, IonItem,  IonButton,FormsModule, IonImg ]
 })
 export class GymCercaPage {
    constructor(private router: Router) {}
