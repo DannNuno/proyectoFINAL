@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonLabel, IonItem, IonItemDivider, IonButton } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonLabel, IonItem, IonItemDivider, IonButton, IonImg } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 
@@ -11,7 +11,7 @@ import { HttpClient,HttpClientModule } from '@angular/common/http';
   templateUrl: './ejercicios.page.html',
   styleUrls: ['./ejercicios.page.scss'],
   standalone: true,
-  imports: [ IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonList, IonLabel,  IonItemDivider,HttpClientModule, IonButton]
+  imports: [ IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonList, IonLabel,  IonItemDivider,HttpClientModule, IonButton, IonItem, IonImg]
 })
 export class EjerciciosPage implements OnInit {
 
