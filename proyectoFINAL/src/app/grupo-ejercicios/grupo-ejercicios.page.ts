@@ -26,9 +26,10 @@ export class GrupoEjerciciosPage implements OnInit {
   }
     verEjercicio(id: any) {
     // Guarda el ejercicio seleccionado si quieres pasarlo completo
-    const ejercicio = this.grupo?.ejercicios?.[id];
-    localStorage.setItem('ejercicioActual', JSON.stringify(ejercicio));
+   const ejercicio = this.grupo?.ejercicios?.find((e: any) => e.id === id);
 
+    localStorage.setItem('ejercicioActual', JSON.stringify(ejercicio));
+      
     // Redirige al detalle
     this.router.navigate(['/detalle-ejercicio', id ]);
   }

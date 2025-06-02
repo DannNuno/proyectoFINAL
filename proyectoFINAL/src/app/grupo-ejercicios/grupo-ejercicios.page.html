@@ -7,9 +7,9 @@
 
   <ion-list>
     <ion-item
-      button
+      
       *ngFor="let ejercicio of grupo?.ejercicios; let i = index"
-      (click)="verEjercicio(ejercicio.id)"
+      (click)="verEjercicio(ejercicio.id) "
     >
       {{ ejercicio.nombre }}
     </ion-item>

@@ -9,7 +9,8 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
-  },  {
+  },
+  {
     path: 'gym-cerca',
     loadComponent: () => import('./gym-cerca/gym-cerca.page').then( m => m.GymCercaPage)
   },
@@ -37,9 +38,11 @@ export const routes: Routes = [
     path: 'grupo-ejercicios',
     loadComponent: () => import('./grupo-ejercicios/grupo-ejercicios.page').then( m => m.GrupoEjerciciosPage)
   },
-  {
-    path: 'detalle-ejercicio',
-    loadComponent: () => import('./detalle-ejercicio/detalle-ejercicio.page').then( m => m.DetalleEjercicioPage)
-  },
+ // app.routes.ts (o donde tengas tus rutas)
+{
+  path: 'detalle-ejercicio/:id',
+  loadComponent: () => import('./detalle-ejercicio/detalle-ejercicio.page').then(m => m.DetalleEjercicioPage)
+},
+
 
 ];
